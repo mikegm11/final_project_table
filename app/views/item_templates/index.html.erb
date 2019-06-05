@@ -82,7 +82,11 @@
 
         <!-- Display item.restaurant_id start -->
         <td>
-          <%= item.restaurant.name %>
+          <% if item.restaurant.present? %>
+            <a href="/restaurants/<%= item.restaurant.id %>">
+              <%= item.restaurant.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display item.restaurant_id end -->
 
